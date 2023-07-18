@@ -1,0 +1,94 @@
+body {
+    font-family: 'Ubuntu', sans-serif;
+}
+.faq-section {
+max-width: 800px;
+margin: 0 auto;
+padding: 50px 20px;
+}
+
+.search-container {
+margin-bottom: 30px;
+}
+
+.search-container input[type=text] {
+padding: 12px;
+border: none;
+border-radius: 5px;
+width: 95%;
+}
+
+.faq-list {
+display: flex;
+flex-direction: column;
+}
+
+.faq-item {
+background-color: #fff;
+border-radius: 10px;
+box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+margin-bottom: 20px;
+overflow: hidden;
+}
+
+.faq-question {
+padding: 10px;
+margin: 0;
+font-size: 20px;
+font-weight: bold;
+cursor: pointer;
+}
+
+.faq-answer {
+padding: 10px;
+margin: 0;
+font-size: 16px;
+line-height: 1.5;
+color: #666;
+}
+
+.faq-item.active .faq-answer {
+display: block;
+}
+.container h1 {
+font-size: 30px;
+margin-bottom: 2px;
+width:100%;
+text-align:center;
+text-shadow: 2px 2px 4px black;
+}
+
+
+.faq-item:hover {
+    background-color: #184ce7;
+    transition: background-color 2s;
+}
+
+.faq-item:hover .faq-question {
+    color: white;
+    transition: color 0.1s;
+}
+
+.faq-item:hover .faq-answer {
+    color: white;
+    transition: color 2s;
+}
+::selection {
+    background-color: yellow;
+    color: black;
+  }
+  
+
+@media screen and (max-width: 768px) {
+.faq-section {
+padding: 30px 10px;
+}
+
+.faq-question {
+font-size: 13px;
+}
+
+.faq-answer {
+font-size: 12px;
+}
+}
