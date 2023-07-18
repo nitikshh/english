@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Summary speaks</title>
+	<link rel="stylesheet" href= "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css"> </link>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&family=Ubuntu:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+     <p id="demo">English is a West Germanic language that originated in England and is now spoken as a first language by over 400 million people worldwide. It is also the most widely used second language, with around 1.5 billion people speaking it in total.
+
+English is an official language in many countries, including the United States, United Kingdom, Canada, Australia, New Zealand, and many countries in Africa and Asia. It is also the language of international business, diplomacy, and science.
+
+The English language has evolved over time and has been influenced by many other languages, including Latin, French, German, and Norse. It has a complex grammar system, including noun and verb conjugation, tenses, and sentence structure. English also has a vast vocabulary, with many words borrowed from other languages and new words being added every year.
+
+Overall, English is an important language for communication and understanding in today's globalized world.</p>
+<button onclick="speak()">Speak</button>
+<button onclick="stop()">Stop</button>
+
+
+<script>
+ var synth = window.speechSynthesis;
+var utterance;
+
+function speak() {
+  var text = document.getElementById("demo").textContent;
+  utterance = new SpeechSynthesisUtterance(text);
+  synth.speak(utterance);
+}
+
+function stop() {
+  synth.cancel();
+}
+
+</script>
+</body>
+</html>
